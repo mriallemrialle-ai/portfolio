@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Кейс · Улучшение UX корзины покупок для sodamoda.ru</title>
+    <meta
+      name="description"
+      content="Кейс: переработка UX корзины покупок для fashion-платформы sodamoda.ru. Исследование, гипотезы, решения, UX- и A/B-тестирование. +14% конверсии из корзины в оформление заказа."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/case.css" />
+  </head>
+  <body>
+    <!-- ============================ TOP BAR ============================ -->
+    <header class="topbar">
+      <div class="wrap">
+        <div class="col">
+          <a class="topbar__back" href="index.html">← На главную</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero wrap" id="overview">
+      <div class="col">
+        <p class="hero__meta">
+          <a href="https://sodamoda.com" target="_blank" rel="noopener">sodamoda.ru</a>
+          · Fashion-tech, маркетплейс
+        </p>
+
+        <h1 class="hero__title">Улучшение UX корзины покупок для sodamoda.ru</h1>
+
+        <p class="hero__lead">
+          Переработала UX корзины на основе пользовательских интервью, UX-аудита и анализа
+          конкурентов и через A/B-тест увеличила конверсию из корзины в покупку на&nbsp;14%,
+          снизив количество брошенных корзин на&nbsp;12%.
+        </p>
+
+        <ul class="specs">
+          <li><span class="specs__k">Моя роль:</span> Product Designer</li>
+          <li><span class="specs__k">Команда:</span> CPO, Frontend Developer, Backend Developer</li>
+          <li><span class="specs__k">Ответственность:</span> исследования, UX-аудит, анализ конкурентов, формирование гипотез, проектирование интерфейсов, макеты для разработки, анализ A/B-теста</li>
+          <li><span class="specs__k">Аудитория:</span> покупательницы премиум-сегмента в СНГ и MENA</li>
+          <li><span class="specs__k">Платформы:</span> Web, Mobile</li>
+        </ul>
+      </div>
+    </section>
+
+    <figure class="shot shot--pad reveal">
+      <img src="assets/images/case-hero.png" alt="Корзина sodamoda.ru" />
+    </figure>
+
+    <!-- ============================ ПРОБЛЕМА ============================ -->
+    <section class="section" id="problem">
+      <div class="wrap col">
+        <h2 class="h2">Проблема</h2>
+        <p class="lead">
+          При анализе продуктовой аналитики я заметила, что значительная часть пользователей
+          добавляет товары в корзину, но не завершает покупку.
+        </p>
+
+        <div class="callout">
+          <div class="callout__icon">✳</div>
+          <p>
+            Согласно исследованию <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a>, в среднем 70,19% корзин в e-commerce
+            остаются брошенными. При этом исследователи отмечают, что за счёт улучшения UX
+            корзины и оформления заказа крупные интернет-магазины могут увеличить конверсию
+            в среднем на 35,26%, поскольку многие потери происходят именно из-за проблем
+            пользовательского опыта.
+          </p>
+        </div>
+
+        <p>
+          Аналитика показывала, что пользователи доходят до корзины, но не совершают следующий
+          шаг — оформление заказа. Это заставило меня задуматься, почему они останавливаются
+          именно на этом этапе.
+        </p>
+        <p>Как помочь пользователям, которые уже проявили интерес к товару, принять решение о покупке?</p>
+        <p>
+          Я предположила, что пользователи используют корзину не только для оформления заказа,
+          но и как место для сохранения товаров. При этом текущий интерфейс недостаточно помогает
+          им преодолеть сомнения и завершить покупку.
+        </p>
+        <p>Чтобы проверить эту гипотезу, я провела пользовательские интервью, UX-аудит и анализ конкурентов.</p>
+
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/case-before.png" alt="Корзина до редизайна" />
+      </figure>
+    </section>
+
+    <!-- ============================ ИССЛЕДОВАНИЕ ============================ -->
+    <section class="section" id="research">
+      <div class="wrap col">
+        <h2 class="h2">Исследование рынка</h2>
+        <p>Перед проектированием решений я изучила лучшие практики e-commerce и отраслевые исследования, а также разобрала корзины конкурентов.</p>
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/case-research.png" alt="Анализ корзин конкурентов" />
+        <figcaption class="shot__cap">Анализ корзин конкурентов: Ozon, Wildberries, Farfetch, Золотое Яблоко, Lamoda</figcaption>
+      </figure>
+
+      <div class="wrap col">
+        <div class="research__item">
+          <h3 class="h3">Бесплатная доставка</h3>
+          <p>В существующей корзине отсутствовала информация о бесплатной доставке и сумме, необходимой для её получения.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>Согласно <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a>, пользователи чаще увеличивают сумму заказа, если видят прогресс до бесплатной доставки прямо в корзине.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Авторизованный пользователь чаще возвращается и тратит больше</h3>
+          <p>Пользователи получают скидку 10% на первый заказ после регистрации, однако в корзине эта возможность никак не была обозначена. Из-за этого часть пользователей оформляла заказ без авторизации и не пользовалась доступной выгодой.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>HubSpot Research: бонус за регистрацию увеличивает конверсию в покупку до 18%.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Email- и push-уведомления снижают количество брошенных корзин</h3>
+          <p>Пользователи не всегда завершают покупку с первого посещения. Автоматические email- и push-уведомления с напоминанием о товарах в корзине помогают вернуть их в сценарий оформления заказа и увеличить конверсию.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>Исследования <a href="https://www.klaviyo.com/blog/abandoned-cart-benchmarks" target="_blank" rel="noopener">Klaviyo</a> показывают, что автоматические сценарии с напоминанием о брошенной корзине являются одним из самых эффективных инструментов возврата пользователей и увеличения числа завершённых покупок.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Подарок за сумму заказа мотивирует увеличить сумму покупки</h3>
+          <p>В магазине уже действовала акция с подарком за определённую сумму заказа, однако в корзине пользователи не видели эту информацию. Из-за этого механика не работала в момент принятия решения о покупке и не мотивировала увеличить сумму заказа.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>По данным <a href="https://www.imrg.org/blog/exploring-the-value-of-gift-with-purchase/" target="_blank" rel="noopener">IMRG</a>, механика Gift With Purchase повышает воспринимаемую ценность предложения и мотивирует пользователей завершить покупку.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Информация о рассрочке снижает ценовой барьер</h3>
+          <p>Sodamoda работает в премиальном сегменте, где средний чек значительно выше массового рынка. Для таких покупок возможность оплаты частями помогает снизить психологический барьер и сделать дорогостоящие товары доступнее без снижения их воспринимаемой ценности.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>Исследования рынка <a href="https://stripe.com/blog/testing-the-impact-of-buy-now-pay-later" target="_blank" rel="noopener">Buy Now, Pay Later (BNPL)</a> показывают, что возможность оплаты частями повышает конверсию, увеличивает средний чек и снижает количество брошенных корзин, особенно при покупке товаров с высокой стоимостью.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Cross-sell помогает увеличить средний чек</h3>
+          <p>Для fashion-сегмента особенно характерны комплектные покупки. Пользователи часто приобретают не отдельный товар, а образ целиком.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>По данным Salesforce, 35% выручки e-commerce приходится на Cross-sell.</p></div>
+        </div>
+
+        <p class="closing">
+          После завершения исследования я инициировала брейншторм с командой. На основе полученных
+          инсайтов мы сформировали и приоритизировали гипотезы, которые легли в основу дальнейшей
+          разработки решений.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ ГИПОТЕЗЫ ============================ -->
+    <section class="section" id="hypotheses">
+      <div class="wrap col">
+        <div class="hypos__head">
+          <h2 class="h2">Гипотезы</h2>
+          <p class="subtitle">Гипотезы, которые появились во время брейншторма</p>
+        </div>
+      </div>
+
+      <div class="wrap--full">
+        <div class="hypos">
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №1</span><p>Если показывать <b>прогресс до бесплатной доставки</b> прямо в корзине, пользователи будут чаще увеличивать сумму заказа для достижения порога бесплатной доставки.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №2</span><p>Если показать <b>выгоду регистрации</b> (скидку 10% на первый заказ) прямо в корзине, больше пользователей будут авторизовываться перед оформлением заказа, что позволит использовать SMS- и email-напоминания для возврата пользователей с брошенной корзиной.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №3</span><p>Если сделать <b>подарок за определённую сумму заказа</b> заметным в корзине и визуализировать прогресс до его получения, пользователи будут чаще увеличивать стоимость корзины.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №4</span><p>Если показать <b>возможность оплаты частями</b> прямо в корзине, пользователи будут легче воспринимать стоимость покупки и чаще переходить к оформлению заказа.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №5</span><p>Если дать пользователям возможность <b>переносить товары из корзины в избранное</b>, они смогут сохранять интересующие товары, не используя корзину как список желаний.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №6</span><p>Если показывать в корзине <b>товары, дополняющие выбранный образ</b>, пользователи будут чаще совершать комплексные покупки, что увеличит средний чек.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Гипотеза №7</span><p>Если дать пользователям возможность <b>изменить размер или цвет товара прямо в корзине</b>, им не придётся возвращаться в карточку товара, что может сократить количество незавершённых покупок.</p></article>
+        </div>
+
+      </div>
+
+      <div class="wrap col">
+        <h3 class="h3" style="margin-top:clamp(36px,5vw,56px)">Приоритизация гипотез</h3>
+      </div>
+      <div class="matrix-bleed">
+        <div class="matrix reveal">
+            <span class="matrix__v"></span>
+            <span class="matrix__h"></span>
+            <span class="matrix__chip matrix__chip--good chip-top">Сильное влияние</span>
+            <span class="matrix__chip matrix__chip--cool chip-bottom">Слабое влияние</span>
+            <span class="matrix__chip matrix__chip--cool chip-left">Много усилий</span>
+            <span class="matrix__chip matrix__chip--good chip-right">Мало усилий</span>
+
+            <div class="mcard mcard--hi" style="left:68%; top:18%"><span>Гипотеза №1</span><b>Прогресс до бесплатной доставки</b></div>
+            <div class="mcard" style="left:30%; top:28%"><span>Гипотеза №5</span><b>Cross-sell</b></div>
+            <div class="mcard" style="left:60%; top:29%"><span>Гипотеза №4</span><b>Оплата частями</b></div>
+            <div class="mcard" style="left:66%; top:40%"><span>Гипотеза №2</span><b>Регистрация + SMS/email</b></div>
+            <div class="mcard" style="left:38%; top:42%"><span>Гипотеза №3</span><b>Подарки</b></div>
+            <div class="mcard" style="left:72%; top:55%"><span>Гипотеза №6</span><b>Перенос в избранное</b></div>
+            <div class="mcard mcard--lo" style="left:18%; top:82%"><span>Гипотеза №7</span><b>Смена размера/цвета</b></div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================ РЕШЕНИЯ ============================ -->
+    <section class="section" id="solutions">
+      <div class="wrap col"><h2 class="h2">Реализованные решения</h2></div>
+
+      <!-- 1 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">1</span><h3 class="solution__title">Сделала бесплатную доставку более заметной</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Проблема</h4><p>Пользователь не видел, сколько осталось до бесплатной доставки, поэтому у него не было стимула увеличить сумму заказа.</p></div>
+            <div class="solution__col"><h4>Решение</h4><p>Добавила прогресс-бар с суммой, оставшейся до бесплатной доставки, чтобы мотивировать пользователя увеличить стоимость заказа.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/sol-delivery.png" alt="Прогресс до бесплатной доставки" /></figure>
+      <!-- 2 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">2</span><h3 class="solution__title">Повысила ценность регистрации перед оформлением заказа</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Проблема</h4><p>Пользователи не знали о скидке на первый заказ и не видели причин регистрироваться. В результате компания не могла использовать email- и push-уведомления для возврата пользователей с брошенной корзиной.</p></div>
+            <div class="solution__col"><h4>Решение</h4><p>Добавила в корзину блок со скидкой 10% на первый заказ, чтобы мотивировать пользователей авторизоваться до оформления покупки.</p><p>Это позволяет не только повысить количество зарегистрированных пользователей, но и использовать email- и push-уведомления для возврата пользователей с брошенной корзиной.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/sol-registration.png" alt="Скидка за регистрацию в корзине" /></figure>
+      <!-- 3 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">3</span><h3 class="solution__title">Сделала механику подарков заметной в корзине</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Проблема</h4><p>Пользователи не знали о действующей акции с подарками за сумму заказа, поэтому она не мотивировала увеличить стоимость корзины.</p></div>
+            <div class="solution__col"><h4>Решение</h4><p>Добавила в корзину блок с подарками и прогрессом до следующего порога, чтобы пользователи видели доступные подарки и были мотивированы увеличить сумму заказа.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/sol-gifts.png" alt="Механика подарков в корзине" /></figure>
+      <!-- 4 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">4</span><h3 class="solution__title">Оплата частями</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Проблема</h4><p>Из-за высокого среднего чека пользователи не видели возможность оплаты частями до оформления заказа, что увеличивало ценовой барьер перед покупкой.</p></div>
+            <div class="solution__col"><h4>Решение</h4><p>Добавила информацию о возможности оплаты частями в корзину и рядом с ценой товара, чтобы снизить воспринимаемый ценовой барьер ещё до оформления заказа.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/sol-installments.png" alt="Оплата частями в корзине" /></figure>
+      <!-- 5 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">5</span><h3 class="solution__title">С этим покупают</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Проблема</h4><p>Пользователи не получали рекомендации товаров, которые дополняют выбранный образ, из-за чего терялась возможность увеличить средний чек.</p></div>
+            <div class="solution__col"><h4>Решение</h4><p>Добавила блок «С этим покупают» с товарами, которые дополняют выбранный образ, чтобы помочь пользователям собрать комплект и увеличить средний чек.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/sol-crosssell.png" alt="Блок «С этим покупают» в корзине" /></figure>
+    </section>
+
+    <!-- ============================ UX-ТЕСТИРОВАНИЕ ============================ -->
+    <section class="section" id="testing">
+      <div class="wrap col">
+        <h2 class="h2">UX-тестирование концепции</h2>
+
+        <dl class="deflist">
+          <div><dt>Цель</dt><dd>Проверить первую концепцию корзины и выявить точки, снижающие эффективность сценария оформления заказа.</dd></div>
+          <div><dt>Метод</dt><dd>Модерируемое юзабилити-тестирование первой концепции корзины.</dd></div>
+          <div><dt>Участники</dt><dd>5 пользователей, регулярно совершающих покупки в интернет-магазинах одежды.</dd></div>
+          <div>
+            <dt>Что проверяли</dt>
+            <dd>
+              <ul>
+                <li>Насколько понятна механика бесплатной доставки.</li>
+                <li>Воспринимается ли подарок за сумму заказа как дополнительная выгода.</li>
+                <li>Достаточно ли информации об оплате частями.</li>
+                <li>Замечают ли пользователи скидку за регистрацию.</li>
+                <li>Насколько удобен сценарий выбора сопутствующих товаров.</li>
+              </ul>
+            </dd>
+          </div>
+          <div><dt>Сценарий</dt><dd>Участникам предложили оформить заказ и вслух комментировать свои действия, отмечая элементы, которые помогают или мешают принять решение о покупке.</dd></div>
+        </dl>
+      </div>
+
+      <figure class="shot reveal"><img src="assets/images/ux-first-version.png" alt="Первая версия корзины для UX-теста" /></figure>
+
+      <div class="quotes-bleed">
+        <div class="quotes reveal">
+          <div class="quotes__grid">
+            <div class="quote">
+              <div class="quote__mark">“</div>
+              <p class="quote__text">Я вижу, что бесплатная доставка есть, но <b>не понимаю, насколько я близко к ней</b>. Если осталось совсем немного, я бы, наверное, добавила ещё что-нибудь.</p>
+              <p class="quote__insight"><b>Инсайт:</b> пользователям не хватало понимания прогресса до бесплатной доставки.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">“</div>
+              <p class="quote__text">Я заметила, что есть оплата частями, но <b>не понимаю, как это работает</b>. Хотелось бы узнать условия, не уходя с этой страницы.</p>
+              <p class="quote__insight"><b>Инсайт:</b> пользователям не хватало информации об условиях оплаты частями.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">“</div>
+              <p class="quote__text"><b>Только в конце заметила</b>, что можно получить скидку за регистрацию. Если бы увидела это раньше, скорее всего, сразу бы зарегистрировалась.</p>
+              <p class="quote__insight"><b>Инсайт:</b> выгода регистрации была недостаточно заметной.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">“</div>
+              <p class="quote__text">Эти товары мне подходят, но <b>открывать каждую карточку неудобно</b>. Если можно было бы добавить сразу отсюда, я бы точно посмотрела ещё что-нибудь.</p>
+              <p class="quote__insight"><b>Инсайт:</b> пользователи ожидали возможность быстро добавить рекомендованный товар прямо из корзины.</p>
+            </div>
+          </div>
+          <div class="quotes__people">
+            <div class="quotes__avatars">
+              <span class="avatar">М</span>
+              <span class="avatar">А</span>
+              <span class="avatar">К</span>
+              <span class="avatar avatar--more">+2</span>
+            </div>
+            <span class="quotes__caption">5 участников юзабилити-тестирования</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap col">
+        <p class="closing">Полученные инсайты легли в основу финальной версии интерфейса и были переданы на проверку в A/B-тесте.</p>
+      </div>
+
+      <figure class="shot reveal"><img src="assets/images/case-final.png" alt="Финальная версия корзины" /></figure>
+    </section>
+
+    <!-- ============================ A/B ============================ -->
+    <section class="section" id="ab">
+      <div class="wrap col">
+        <h2 class="h2">A/B-тестирование</h2>
+        <h3 class="h3">Цели эксперимента</h3>
+
+        <div class="goals">
+          <div class="goal">
+            <p class="goal__k">Основная метрика</p>
+            <p class="goal__v">Конверсия из корзины в оформление заказа</p>
+            <p class="goal__k2">Проверяли влияние</p>
+            <ul><li>бесплатной доставки;</li><li>регистрации;</li><li>оплаты частями.</li></ul>
+          </div>
+          <div class="goal">
+            <p class="goal__k">Дополнительная метрика</p>
+            <p class="goal__v">Средний чек (AOV)</p>
+            <p class="goal__k2">Проверяли влияние</p>
+            <ul><li>подарков за сумму заказа;</li><li>блока «С этим покупают».</li></ul>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="ab">
+            <thead>
+              <tr><th>Изменение</th><th>Метрика</th><th>До</th><th>После</th><th>Изменение</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Бесплатная доставка</td><td>Конверсия из корзины в оформление заказа</td>
+                <td>32,0%</td><td>36,5%</td><td><span class="delta">+14%</span></td>
+              </tr>
+              <tr>
+                <td>Регистрация</td><td>Конверсия из корзины в оформление заказа</td>
+                <td>—</td><td>—</td><td><span class="delta--soft">Входит в общий рост <b>+14%</b></span></td>
+              </tr>
+              <tr>
+                <td>Оплата частями</td><td>Конверсия из корзины в оформление заказа</td>
+                <td>—</td><td>—</td><td><span class="delta--soft">Входит в общий рост <b>+14%</b></span></td>
+              </tr>
+              <tr>
+                <td>Подарки за сумму заказа</td><td>Средний чек (AOV)</td>
+                <td>18 900 ₽</td><td>20 400 ₽</td><td><span class="delta">+8%</span></td>
+              </tr>
+              <tr>
+                <td>«С этим покупают»</td><td>Средний чек (AOV)</td>
+                <td>—</td><td>—</td><td><span class="delta--soft">Входит в общий рост <b>+8%</b></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="ab__note">
+          Трафик был распределён между контрольной и экспериментальной группами в соотношении
+          50/50. Эксперимент проводился до достижения статистически значимого результата.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ ВЫВОД ============================ -->
+    <section class="section" id="outcome">
+      <div class="wrap col">
+        <h2 class="h2">Вывод</h2>
+        <p class="lead">
+          Редизайн корзины показал, как исследования и работа с метриками помогают влиять на
+          бизнес-результат. Мы нашли реальные боли пользователей, приоритизировали гипотезы
+          на матрице impact/effort и довели решения до A/B-теста на боевом трафике.
+        </p>
+
+        <h3 class="h3" style="margin-top:clamp(28px,4vw,44px)">Результат для бизнеса</h3>
+        <p>
+          Обновлённая корзина стала работать не как список товаров, а как часть пути к покупке —
+          она удерживает внимание, показывает выгоды и помогает принять решение.
+        </p>
+        <ul class="outcome-list">
+          <li>Конверсия из корзины в покупку — <b>+14%</b>.</li>
+          <li>Количество брошенных корзин — <b>−12%</b>.</li>
+          <li>Средний чек (AOV) — <b>+8%</b>.</li>
+        </ul>
+
+        <h3 class="h3" style="margin-top:clamp(32px,5vw,52px)">Рефлексия и выводы</h3>
+        <div class="reflections">
+          <div class="reflection">
+            <span class="reflection__mark">“</span>
+            <p>Корзина — не тупик, а часть пути. Если показать выгоды и прогресс прямо здесь, пользователь охотнее доходит до оплаты.</p>
+          </div>
+          <div class="reflection">
+            <span class="reflection__mark">“</span>
+            <p>Сначала гипотезы, потом пиксели. Приоритизация на матрице impact/effort помогла вложиться в решения с максимальным влиянием при минимальных усилиях.</p>
+          </div>
+          <div class="reflection">
+            <span class="reflection__mark">“</span>
+            <p>Цифры важнее мнений. Финальные решения подтвердил не вкус, а UX-тест и A/B на реальном трафике.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ КОНТАКТ ============================ -->
+    <section class="section contact" id="contact">
+      <div class="wrap col">
+        <h2 class="h2">Буду рада пообщаться</h2>
+        <p>Интересно сотрудничество — просто напишите, обсудим задачу.</p>
+        <p class="contact__links">
+          <a href="https://t.me/mmrialle" target="_blank" rel="noopener">Telegram</a>,
+          <a href="mailto:mriallemrialle@gmail.com">mriallemrialle@gmail.com</a>.
+        </p>
+
+        <div class="cardline">
+          <span class="cardline__badge">М</span>
+          <span class="cardline__text"><b>Мария Маркова</b> · Продуктовый дизайнер</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FLOATING CASE NAV ============================ -->
+    <nav class="casedock" aria-label="Навигация по кейсу">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Проблема</a>
+      <a href="#research">Исследование</a>
+      <a href="#hypotheses">Гипотезы</a>
+      <a href="#solutions">Решения</a>
+      <a href="#testing">Тестирование</a>
+      <a href="#ab">A/B</a>
+      <a href="#outcome">Вывод</a>
+    </nav>
+
+    <script>
+      (() => {
+        /* scroll reveal */
+        const els = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach((e) => e.classList.add("in"));
+        } else {
+          const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              e.target.classList.add("in");
+              obs.unobserve(e.target);
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+          els.forEach((e) => io.observe(e));
+        }
+
+        /* scrollspy for the floating case nav */
+        const links = Array.from(document.querySelectorAll(".casedock a"));
+        const map = new Map();
+        links.forEach((a) => {
+          const sec = document.querySelector(a.getAttribute("href"));
+          if (sec) map.set(sec, a);
+        });
+        if ("IntersectionObserver" in window && map.size) {
+          const spy = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              links.forEach((l) => l.classList.remove("active"));
+              const a = map.get(e.target);
+              if (a) {
+                a.classList.add("active");
+                a.scrollIntoView({ block: "nearest", inline: "center" });
+              }
+            });
+          }, { rootMargin: "-45% 0px -50% 0px" });
+          map.forEach((_, sec) => spy.observe(sec));
+        }
+      })();
+    </script>
+  </body>
+</html>
