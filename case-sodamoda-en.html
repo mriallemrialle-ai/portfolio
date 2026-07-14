@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Case · Improving cart UX for sodamoda.ru</title>
+    <meta
+      name="description"
+      content="Case study: redesigning the shopping cart UX for the fashion platform sodamoda.ru. Research, hypotheses, solutions, UX and A/B testing. +14% cart-to-checkout conversion."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/case.css" />
+  </head>
+  <body>
+    <!-- ============================ TOP BAR ============================ -->
+    <header class="topbar">
+      <div class="wrap">
+        <div class="col topbar__row">
+          <a class="topbar__back" href="index-en.html">← Home</a>
+          <a class="topbar__lang" href="case-sodamoda.html">RU</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero wrap" id="overview">
+      <div class="col">
+        <p class="hero__meta">
+          <a href="https://sodamoda.com" target="_blank" rel="noopener">sodamoda.ru</a>
+          · Fashion-tech, marketplace
+        </p>
+
+        <h1 class="hero__title">Improving cart UX for sodamoda.ru</h1>
+
+        <p class="hero__lead">
+          Redesigned the cart UX based on research, a UX audit, and competitor analysis,
+          and increased cart-to-purchase conversion by&nbsp;14%.
+        </p>
+
+        <ul class="specs">
+          <li><span class="specs__k">My role:</span> Product Designer</li>
+          <li><span class="specs__k">Team:</span> CPO, Frontend Developer, Backend Developer</li>
+          <li><span class="specs__k">Platforms:</span> Web, Mobile</li>
+        </ul>
+      </div>
+    </section>
+
+    <figure class="shot shot--pad reveal">
+      <img src="assets/images/case-hero.png" alt="Sodamoda.ru cart" />
+    </figure>
+
+    <!-- ============================ PROBLEM ============================ -->
+    <section class="section" id="problem">
+      <div class="wrap col">
+        <h2 class="h2">Problem</h2>
+        <p class="lead">
+          While analyzing product analytics, I noticed that a significant share of users
+          add items to the cart but don't complete the purchase.
+        </p>
+
+        <div class="callout">
+          <div class="callout__icon">✳</div>
+          <p>
+            According to <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a> research, on average 70.19% of e-commerce carts
+            are abandoned. Researchers also note that by improving cart and checkout
+            UX, large online stores can increase conversion
+            by an average of 35.26%, since much of the loss happens
+            specifically because of user experience issues.
+          </p>
+        </div>
+
+        <p>
+          Analytics showed that users reach the cart but don't take the next
+          step — checkout. This made me wonder why they stop
+          exactly at this stage.
+        </p>
+        <p>How do you help users who have already shown interest in a product decide to buy it?</p>
+        <p>
+          I hypothesized that users treat the cart not only as a way to check out,
+          but also as a place to save items. At the same time, the current interface wasn't helping
+          them overcome hesitation and complete the purchase.
+        </p>
+        <p>To test this hypothesis, I conducted research.</p>
+
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/Старая корзина.png" alt="Cart before the redesign" />
+        <figcaption class="shot__cap">Cart before the redesign</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============================ RESEARCH ============================ -->
+    <section class="section" id="research">
+      <div class="wrap col">
+        <h2 class="h2">Research</h2>
+        <p>Before designing solutions, I studied e-commerce best practices and industry research, and analyzed competitors' carts.</p>
+      </div>
+
+      <div class="wrap col">
+        <h3 class="h3" style="margin-top:clamp(28px,4vw,44px)">Market research</h3>
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/исследование рынка.png" alt="Competitor cart analysis" />
+        <figcaption class="shot__cap">Competitor cart analysis: Ozon, Wildberries, Farfetch, Zolotoe Yabloko, Lamoda</figcaption>
+      </figure>
+
+      <div class="wrap col">
+        <div class="research__item">
+          <h3 class="h3">Free shipping</h3>
+          <p>The existing cart lacked information about free shipping and the amount needed to qualify for it.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>According to <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a>, users decide to buy with more confidence when they see the free-shipping terms directly in the cart. This reduces uncertainty during checkout and can help drive CR growth.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Registered users return more often and spend more</h3>
+          <p>Users get a 10% discount on their first order after registering, but this wasn't indicated anywhere in the cart. As a result, some users checked out without registering and missed out on the available discount.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>HubSpot Research: a signup incentive increases purchase conversion by up to 18%.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Email and SMS notifications reduce cart abandonment</h3>
+          <p>Users don't always complete a purchase on their first visit. Automated email and SMS reminders about items left in the cart help bring them back into the checkout flow and increase conversion.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p><a href="https://www.klaviyo.com/blog/abandoned-cart-benchmarks" target="_blank" rel="noopener">Klaviyo</a> research shows that automated abandoned-cart reminder flows are one of the most effective tools for bringing users back and increasing completed purchases.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Installment information lowers the price barrier</h3>
+          <p>Sodamoda operates in the premium segment, where the average order value is significantly higher than the mass market. For such purchases, the option to pay in installments helps lower the psychological barrier and makes expensive items more accessible without reducing their perceived value.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p><a href="https://stripe.com/blog/testing-the-impact-of-buy-now-pay-later" target="_blank" rel="noopener">Buy Now, Pay Later (BNPL)</a> market research shows that the option to pay in installments increases conversion, raises average order value, and reduces cart abandonment, especially for higher-priced items.</p></div>
+        </div>
+
+        <div class="research__item">
+          <h3 class="h3">Last size available</h3>
+          <p>Users didn't see that the size they needed was running out.</p>
+          <div class="callout"><div class="callout__icon">✳</div><p>According to the scarcity effect, limited availability of a product increases the likelihood of a purchase decision.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ BRAINSTORM ============================ -->
+    <section class="section" id="brainstorm">
+      <div class="wrap col">
+        <h2 class="h2 h2--xl">Brainstorm</h2>
+        <p class="closing">
+          After finishing the research, I ran a brainstorm with the team. Based on the
+          insights we gathered, we formed and prioritized hypotheses that became the foundation
+          for the solutions that followed.
+        </p>
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/Брейншторм.png" alt="Brainstorming with the team" />
+      </figure>
+    </section>
+
+    <!-- ============================ HYPOTHESES ============================ -->
+    <section class="section" id="hypotheses">
+      <div class="wrap col">
+        <div class="hypos__head">
+          <h2 class="h2">Hypotheses</h2>
+          <p class="subtitle">Hypotheses that came out of the brainstorm</p>
+        </div>
+      </div>
+
+      <div class="wrap--full">
+        <div class="hypos">
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #1</span><p>If we show <b>progress toward free shipping</b> directly in the cart, it will be easier for users to decide to buy, increasing CR.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #2</span><p>If we show the <b>benefit of registering</b> (a 10% discount on the first order) directly in the cart, more users will complete checkout, increasing CR.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #3</span><p>If we show the <b>option to pay in installments</b> directly in the cart along with detailed payment terms, it will be easier for users to decide to buy, increasing CR.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #4</span><p>If we show in the cart that <b>the size a user needs is running out</b>, users will decide to buy faster, increasing CR.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #5</span><p>If we let users <b>move items from the cart to favorites</b>, they'll be able to save items they're interested in without using the cart as a wishlist, making the purchase flow more convenient and increasing CR.</p></article>
+          <article class="hypo reveal"><span class="hypo__tag">Hypothesis #6</span><p>If we let users <b>change an item's size or color</b> directly in the cart, they won't need to go back to the product page, reducing abandoned purchase flows and increasing CR.</p></article>
+        </div>
+
+      </div>
+
+      <div class="wrap col">
+        <h3 class="h3" style="margin-top:clamp(36px,5vw,56px)">Hypothesis prioritization</h3>
+      </div>
+      <div class="matrix-bleed">
+        <div class="matrix reveal">
+            <span class="matrix__v"></span>
+            <span class="matrix__h"></span>
+            <span class="matrix__chip matrix__chip--good chip-top">High impact</span>
+            <span class="matrix__chip matrix__chip--cool chip-bottom">Low impact</span>
+            <span class="matrix__chip matrix__chip--cool chip-left">High effort</span>
+            <span class="matrix__chip matrix__chip--good chip-right">Low effort</span>
+
+            <div class="mcard mcard--hi" style="left:68%; top:18%"><span>Hypothesis #1</span><b>Progress to free shipping</b></div>
+            <div class="mcard" style="left:60%; top:29%"><span>Hypothesis #3</span><b>Installments</b></div>
+            <div class="mcard" style="left:66%; top:40%"><span>Hypothesis #2</span><b>Registration + SMS/email</b></div>
+            <div class="mcard" style="left:34%; top:32%"><span>Hypothesis #4</span><b>Last size available</b></div>
+            <div class="mcard" style="left:72%; top:55%"><span>Hypothesis #5</span><b>Move to favorites</b></div>
+            <div class="mcard mcard--lo" style="left:18%; top:82%"><span>Hypothesis #6</span><b>Change size/color</b></div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================ SOLUTIONS ============================ -->
+    <section class="section" id="solutions">
+      <div class="wrap col"><h2 class="h2">Solutions we built</h2></div>
+
+      <!-- 1 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">1</span><h3 class="solution__title">Made free shipping more visible</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Problem</h4><p>Users couldn't see how much more they needed to spend to reach free shipping, so they had no incentive to increase their order value.</p></div>
+            <div class="solution__col"><h4>Solution</h4><p>Added a progress bar showing the amount remaining to reach free shipping, motivating users to increase their order value.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/Решения/Бесплатная Доставка.png" alt="Progress toward free shipping" /></figure>
+      <!-- 2 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">2</span><h3 class="solution__title">Increased the value of registering before checkout</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Problem</h4><p>Users didn't know about the first-order discount and saw no reason to register. As a result, the company couldn't use email and SMS reminders to bring back users with abandoned carts.</p></div>
+            <div class="solution__col"><h4>Solution</h4><p>Added a block in the cart with a 10% first-order discount to motivate users to sign in before checkout.</p><p>This not only increases the number of registered users but also enables email and SMS reminders to bring back users with abandoned carts.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/Решения/Скидка за регистрацию.png" alt="Registration discount in the cart" /></figure>
+      <!-- 3 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">3</span><h3 class="solution__title">Installment payments</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Problem</h4><p>Because of the high average order value, users didn't see the option to pay in installments before checkout, which raised the price barrier to purchase.</p></div>
+            <div class="solution__col"><h4>Solution</h4><p>Added installment payment information to the cart and next to the item price, to lower the perceived price barrier even before checkout.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/Решения/Оплата частями.png" alt="Installment payments in the cart" /></figure>
+      <!-- 4 -->
+      <div class="wrap col">
+        <article class="solution reveal">
+          <div class="solution__head"><span class="solution__num">4</span><h3 class="solution__title">Showed users when their size was running low</h3></div>
+          <div class="solution__cols">
+            <div class="solution__col"><h4>Problem</h4><p>Users didn't see that their chosen size was running out, so they weren't in a hurry to complete the purchase.</p></div>
+            <div class="solution__col"><h4>Solution</h4><p>Added a "Low stock" and "last size available" badge to the item in the cart when the needed size is running low, creating a sense of scarcity and speeding up the purchase decision.</p></div>
+          </div>
+        </article>
+      </div>
+      <figure class="shot reveal"><img src="assets/images/Решения/Последний размер.png" alt="\"Last size available\" badge in the cart" /></figure>
+    </section>
+
+    <!-- ============================ UX TESTING ============================ -->
+    <section class="section" id="testing">
+      <div class="wrap col">
+        <h2 class="h2">UX testing the concept</h2>
+
+        <dl class="deflist">
+          <div><dt>Goal</dt><dd>Test the first cart concept and identify points that reduce the effectiveness of the checkout flow.</dd></div>
+          <div><dt>Method</dt><dd>Moderated usability testing of the first cart concept.</dd></div>
+          <div><dt>Participants</dt><dd>5 users who regularly shop at online clothing stores.</dd></div>
+          <div>
+            <dt>What we tested</dt>
+            <dd>
+              <ul>
+                <li>How clear the free-shipping mechanic is.</li>
+                <li>Whether the order-value gift is perceived as an added benefit.</li>
+                <li>Whether there's enough information about installment payments.</li>
+                <li>Whether users notice the registration discount.</li>
+                <li>Whether users notice that a size is running low.</li>
+              </ul>
+            </dd>
+          </div>
+          <div><dt>Scenario</dt><dd>Participants were asked to check out while thinking aloud, noting elements that helped or hindered their purchase decision.</dd></div>
+        </dl>
+      </div>
+
+      <figure class="shot reveal"><img src="assets/images/ux-first-version.png" alt="First cart version used for UX testing" /></figure>
+
+      <div class="quotes-bleed">
+        <div class="quotes reveal">
+          <div class="quotes__grid">
+            <div class="quote">
+              <div class="quote__mark">"</div>
+              <p class="quote__text">I can see free shipping is a thing, but <b>I don't understand how close I am to it</b>. If it was just a little more, I'd probably add something else.</p>
+              <p class="quote__insight"><b>Insight:</b> users lacked visibility into their progress toward free shipping.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">"</div>
+              <p class="quote__text">I noticed there's an installment option, but <b>I don't understand how it works</b>. I'd like to see the terms without leaving this page.</p>
+              <p class="quote__insight"><b>Insight:</b> users lacked information about installment payment terms.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">"</div>
+              <p class="quote__text"><b>I only just noticed</b> that registering gets you a discount. If I'd seen that right away, I probably would have registered first.</p>
+              <p class="quote__insight"><b>Insight:</b> the registration benefit wasn't visible enough.</p>
+            </div>
+            <div class="quote">
+              <div class="quote__mark">"</div>
+              <p class="quote__text">Turns out this is the <b>last size available</b>. If I'd seen that right away, I probably wouldn't have taken so long to decide.</p>
+              <p class="quote__insight"><b>Insight:</b> users noticed limited availability information too late.</p>
+            </div>
+          </div>
+          <div class="quotes__people">
+            <div class="quotes__avatars">
+              <span class="avatar">M</span>
+              <span class="avatar">A</span>
+              <span class="avatar">K</span>
+              <span class="avatar avatar--more">+2</span>
+            </div>
+            <span class="quotes__caption">5 usability testing participants</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap col">
+        <p class="closing">These insights shaped the final version of the interface, which was then handed off for validation in an A/B test.</p>
+      </div>
+
+      <figure class="shot reveal"><img src="assets/images/После исследования.png" alt="Final version of the cart" /></figure>
+    </section>
+
+    <!-- ============================ A/B ============================ -->
+    <section class="section" id="ab">
+      <div class="wrap col">
+        <h2 class="h2">A/B testing</h2>
+        <h3 class="h3">Experiment goals</h3>
+
+        <p><b>Primary metric:</b> cart-to-checkout conversion.</p>
+        <p>Tested the impact of:</p>
+        <ul class="goal-list"><li>free shipping;</li><li>registration;</li><li>installment payments;</li><li>limited size availability.</li></ul>
+
+        <div class="table-wrap">
+          <table class="ab">
+            <thead>
+              <tr><th>Metric</th><th>Control</th><th>Experiment</th><th>Change</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cart-to-checkout conversion</td>
+                <td>32.0%</td><td>36.5%</td><td><span class="delta">+4.5&nbsp;pp (+14%)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ OUTCOME ============================ -->
+    <section class="section" id="outcome">
+      <div class="wrap col">
+        <h2 class="h2 h2--xl">Result</h2>
+
+        <p>
+          The redesigned cart stopped working like a plain list of items and became part of the path to purchase —
+          it holds attention, surfaces benefits, and helps users decide.
+        </p>
+        <ul class="outcome-list">
+          <li>Cart-to-purchase conversion — <b>+14%</b>.</li>
+          <li>Abandoned carts — <b>−12%</b>.</li>
+        </ul>
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/images/До после.png" alt="Cart before and after the redesign" />
+        <figcaption class="shot__cap">Before and after the redesign</figcaption>
+      </figure>
+
+      <div class="wrap col">
+        <h3 class="h3" style="margin-top:clamp(32px,5vw,52px)">Reflections and takeaways</h3>
+        <div class="reflections">
+          <div class="reflection">
+            <span class="reflection__mark">"</span>
+            <p>The cart isn't a dead end — it's part of the journey. Showing benefits and progress right there makes users more willing to reach checkout.</p>
+          </div>
+          <div class="reflection">
+            <span class="reflection__mark">"</span>
+            <p>Hypotheses first, pixels second. Prioritizing on an impact/effort matrix helped us invest in solutions with the highest impact for the lowest effort.</p>
+          </div>
+          <div class="reflection">
+            <span class="reflection__mark">"</span>
+            <p>Numbers beat opinions. The final decisions were validated not by taste, but by a UX test and an A/B test on real traffic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section contact" id="contact">
+      <div class="wrap col">
+        <h2 class="h2">I'd love to talk</h2>
+        <p>Interested in working together — just write to me and we'll discuss the project.</p>
+        <a class="btn" href="https://t.me/mmrialle" target="_blank" rel="noopener">Contact me</a>
+
+        <div class="cardline">
+          <span class="cardline__text"><b>Maria Markova</b> · Product Designer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FLOATING CASE NAV ============================ -->
+    <nav class="casedock" aria-label="Case navigation">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#research">Research</a>
+      <a href="#brainstorm">Brainstorm</a>
+      <a href="#hypotheses">Hypotheses</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#testing">Testing</a>
+      <a href="#ab">A/B</a>
+      <a href="#outcome">Outcome</a>
+    </nav>
+
+    <script>
+      (() => {
+        /* scroll reveal */
+        const els = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach((e) => e.classList.add("in"));
+        } else {
+          const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              e.target.classList.add("in");
+              obs.unobserve(e.target);
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+          els.forEach((e) => io.observe(e));
+        }
+
+        /* scrollspy for the floating case nav */
+        const links = Array.from(document.querySelectorAll(".casedock a"));
+        const map = new Map();
+        links.forEach((a) => {
+          const sec = document.querySelector(a.getAttribute("href"));
+          if (sec) map.set(sec, a);
+        });
+        if ("IntersectionObserver" in window && map.size) {
+          const spy = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              links.forEach((l) => l.classList.remove("active"));
+              const a = map.get(e.target);
+              if (a) {
+                a.classList.add("active");
+                a.scrollIntoView({ block: "nearest", inline: "center" });
+              }
+            });
+          }, { rootMargin: "-45% 0px -50% 0px" });
+          map.forEach((_, sec) => spy.observe(sec));
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -46,8 +46,7 @@ body {
 
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-::selection { background: var(--accent); color: #fff; }
-
+::selection { background: #4d4d4d; color: #fff; }
 /* ---------- layout: centered text column ---------- */
 .wrap { max-width: var(--wide); margin: 0 auto; padding-inline: var(--pad); }
 .col  { max-width: var(--text); margin-inline: auto; }   /* текст посередине */
@@ -55,6 +54,7 @@ a { color: inherit; }
 
 .eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
 .h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 24px; }
+.h2--xl { font-size: clamp(2.6rem, 6.4vw, 5.2rem); letter-spacing: -0.04em; line-height: 1.0; }
 .h3 { font-size: clamp(1.2rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--ink); }
 p { color: var(--muted); }
@@ -79,8 +79,11 @@ p + p { margin-top: 1em; }
   border-bottom: 1px solid var(--line);
 }
 .topbar .wrap { padding-block: 13px; }
+.topbar__row { display: flex; align-items: center; justify-content: space-between; }
 .topbar__back { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
 .topbar__back:hover { color: var(--ink); }
+.topbar__lang { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); transition: color 0.2s var(--ease); }
+.topbar__lang:hover { color: var(--ink); }
 .topbar__label { font-size: 0.9rem; color: var(--faint); }
 .toc { display: flex; gap: 22px; list-style: none; font-size: 0.9rem; }
 .toc a { color: var(--faint); text-decoration: none; transition: color 0.2s var(--ease); }
@@ -137,6 +140,7 @@ p + p { margin-top: 1em; }
 .hero__title { font-size: clamp(2.4rem, 6.4vw, 5.2rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.02; }
 .hero__lead { margin-top: 26px; font-size: clamp(1.25rem, 2.2vw, 1.7rem); font-weight: 600; line-height: 1.32; letter-spacing: -0.02em; color: var(--ink); }
 .specs { list-style: none; margin-top: clamp(32px, 5vw, 56px); display: grid; gap: 12px; }
+.hero + .shot--pad { margin-top: clamp(32px, 5vw, 56px); }
 .specs li { position: relative; padding-left: 20px; color: var(--ink); line-height: 1.5; }
 .specs li::before { content: "·"; position: absolute; left: 4px; color: var(--faint); }
 .specs__k { color: var(--muted); }
@@ -270,6 +274,7 @@ p + p { margin-top: 1em; }
 
 /* ============================ A/B ============================ */
 .goals { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-block: 32px; }
+.goals--single { grid-template-columns: 1fr; max-width: 420px; }
 .goal { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 26px 28px; }
 .goal__k { font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
 .goal__v { font-size: 1.2rem; font-weight: 700; margin-bottom: 18px; }
@@ -294,6 +299,10 @@ table.ab td .delta--soft b { color: var(--good); }
 .outcome-list li::before { content: "·"; position: absolute; left: 4px; color: var(--faint); }
 .outcome-list b { color: var(--ink); font-weight: 700; }
 
+.goal-list { list-style: none; margin-top: 8px; display: grid; gap: 6px; }
+.goal-list li { position: relative; padding-left: 20px; color: var(--muted); line-height: 1.55; }
+.goal-list li::before { content: "·"; position: absolute; left: 4px; color: var(--faint); }
+
 .reflections { margin-top: 18px; display: grid; gap: clamp(22px, 3vw, 34px); }
 .reflection { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
 .reflection__mark { font-size: 1.8rem; line-height: 0.9; color: var(--faint); font-weight: 700; }
@@ -304,6 +313,7 @@ table.ab td .delta--soft b { color: var(--good); }
 .endcta h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 24px; }
 .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #0b0d0a; text-decoration: none; font-weight: 600; padding: 15px 28px; border-radius: 100px; transition: transform 0.2s var(--ease), background 0.2s var(--ease); }
 .btn:hover { transform: translateY(-2px); background: var(--good); }
+.contact a.btn, .contact a.btn:hover { color: #0b0d0a; text-decoration: none; margin-top: clamp(24px, 3vw, 36px); }
 
 /* ============================ CONTACT ============================ */
 .contact a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--faint); transition: text-decoration-color 0.2s var(--ease); }

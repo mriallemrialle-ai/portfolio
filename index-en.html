@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Maria · Product Designer</title>
+    <meta
+      name="description"
+      content="Maria, a product designer. I design data-driven interfaces for proptech, fashion-tech, and complex B2B platforms."
+    />
+
+    <meta property="og:title" content="Maria · Product Designer" />
+    <meta property="og:description" content="Product designer. Research, metrics, design systems." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- fixed background grain + vignette, never scrolls, no pointer cost -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ============================ HERO ============================ -->
+    <header class="hero" id="top">
+      <div class="hero__top">
+        <p class="hero__tagline">
+          Product designer, I build interfaces<br />
+          based on data, research, and metrics.
+        </p>
+        <div class="hero__lang">
+          <a class="hero__lang-link" href="index.html">RU</a>
+        </div>
+      </div>
+      <div class="hero__bottom">
+        <h1 class="hero__name"><span class="hero__name-first">Maria</span><span class="hero__name-last">Markova.</span></h1>
+        <div class="hero__bar">
+          <div class="hero__bar-links">
+            <a href="mailto:mriallemrialle@gmail.com">E-mail</a>
+            <span class="hero__bar-sep">/</span>
+            <a href="https://t.me/mmrialle" target="_blank" rel="noopener">Telegram</a>
+          </div>
+          <nav class="hero__bar-nav">
+            <a href="assets/docs/CV_Maria_Markova.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#results">Results</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- floating dock navigation (matches the reference bottom bar) -->
+    <nav class="dock" aria-label="Main navigation">
+      <a class="dock__brand" href="#top" aria-label="To top">Maria Markova</a>
+      <span class="dock__divider" aria-hidden="true"></span>
+      <ul class="dock__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+      <a class="btn btn--solid dock__cta" href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <!-- ============================ ABOUT ============================ -->
+      <section class="about" id="about">
+        <div class="shell about__inner">
+          <div class="about__left">
+            <p class="about__statement reveal">
+              I combine deep research and product analytics so interfaces grow in metrics, not just in mockups.
+            </p>
+          </div>
+
+          <div class="about__right">
+            <div class="metrics" role="list">
+              <div class="metric reveal" role="listitem" style="--i: 0">
+                <span class="metric__num" data-target="19.1" data-decimals="1" data-prefix="+" data-suffix="%">+0%</span>
+                <span class="metric__label">CR to product page visits</span>
+              </div>
+              <div class="metric reveal" role="listitem" style="--i: 1">
+                <span class="metric__num" data-target="4" data-prefix="$" data-suffix="M+">$0M+</span>
+                <span class="metric__label">project portfolio in the UAE market</span>
+              </div>
+              <div class="metric reveal" role="listitem" style="--i: 2">
+                <span class="metric__num metric__num--word">Awwwards</span>
+                <span class="metric__label">award for a website I designed</span>
+              </div>
+              <div class="metric reveal" role="listitem" style="--i: 3">
+                <span class="metric__num" data-target="6" data-suffix=" yrs">0 yrs</span>
+                <span class="metric__label">in e-com, fintech, proptech, and fashion-tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CASES ============================ -->
+      <section class="cases" id="cases">
+        <div class="cases__head-sticky">
+          <div class="shell cases__head">
+            <h2 class="cases__title">Case</h2>
+          </div>
+        </div>
+        <div class="cases__stack">
+          <article class="case-card" style="--i: 0">
+            <div class="case-card__inner shell">
+              <div class="case-card__img">
+                <picture>
+                  <img src="assets/images/case-hero.png" alt="Sodamoda — cart UX" />
+                </picture>
+              </div>
+              <div class="case-card__body">
+                <h3 class="case-card__name">Improving cart UX for sodamoda.ru</h3>
+                <p class="case-card__desc">
+                  Redesigned the cart of a fashion platform based on research, hypotheses, and A/B testing. Result: +14%&nbsp;cart-to-purchase conversion and −12% abandoned carts.
+                </p>
+                <div class="case-card__tags"><span>Fashion-tech</span><span>UX/UI</span><span>A/B testing</span></div>
+                <a class="case-card__btn" href="case-sodamoda-en.html">Read more →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================ SUPERPOWER ============================ -->
+      <!-- ============================ EXPERIENCE ============================ -->
+      <section class="exp" id="experience">
+        <div class="shell">
+          <h2 class="section__head reveal">Experience</h2>
+
+          <ol class="timeline">
+            <li class="role reveal">
+              <div class="role__meta">
+                <span class="role__years">2&nbsp;yrs 1&nbsp;mo</span>
+                <span class="role__tag">Senior Product Designer</span>
+              </div>
+              <div class="role__body">
+                <h3 class="role__company">Mira Developments</h3>
+                <p class="role__about">
+                  An international proptech and development company with a portfolio of premium projects for the UAE market worth over&nbsp;$4M.
+                </p>
+                <ul class="wins">
+                  <li><b>+0.16%</b> CR to property purchase inquiries in the UltraLux segment through a cascade of A/B tests on key pages.</li>
+                  <li><b>+19.1%</b> CR to product page visits after launching the blog.</li>
+                </ul>
+                <ul class="tasks">
+                  <li>In-depth interviews, UX and guerrilla research on prototypes</li>
+                  <li>Building and maintaining the design system</li>
+                  <li>Data-driven hypotheses with the product team using Amplitude and Heap</li>
+                  <li>Working with development from design through implementation review</li>
+                  <li>Presenting decisions to C-level executives and stakeholders</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="role reveal">
+              <div class="role__meta">
+                <span class="role__years">1&nbsp;yr 1&nbsp;mo</span>
+                <span class="role__tag">Product Designer</span>
+              </div>
+              <div class="role__body">
+                <h3 class="role__company">Sodamoda</h3>
+                <p class="role__about">An international fashion-tech marketplace for the premium women's segment in the CIS and MENA.</p>
+                <ul class="wins">
+                  <li>
+                    <b>+0.9%</b> and <b>+1.8%</b> CR to add-to-cart from the catalog and product page through a research-driven redesign.
+                  </li>
+                  <li>Designed a B2B platform from scratch for easy brand integration into the marketplace.</li>
+                  <li>Designed and launched the marketplace app from scratch following HIG and Material Design for the CIS and MENA markets.</li>
+                </ul>
+                <ul class="tasks">
+                  <li>Marketplace website redesign</li>
+                  <li>Data-driven hypotheses with the product team</li>
+                  <li>User interviews and USM for different segments</li>
+                  <li>Working with development across the entire feature lifecycle</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="role reveal">
+              <div class="role__meta">
+                <span class="role__years">3&nbsp;yrs 2&nbsp;mo</span>
+                <span class="role__tag">UX/UI Designer</span>
+              </div>
+              <div class="role__body">
+                <h3 class="role__company">Only</h3>
+                <p class="role__about">
+                  A top-10 Russian product agency with over 180 industry awards. Clients include VK, SIBUR, Severstal, and MR Group.
+                </p>
+                <ul class="wins">
+                  <li>Designed a website that won an <b>Awwwards</b> award.</li>
+                  <li>Reduced the error rate by introducing cross-review and design checklists.</li>
+                </ul>
+                <ul class="tasks">
+                  <li>Online stores, landing pages, corporate websites, and apps across e-com, fintech, proptech, edtech, and govtech</li>
+                  <li>Complex B2B platforms with multiple roles and scenarios</li>
+                  <li>Presenting decisions to clients and C-level executives</li>
+                  <li>In-depth interviews and prototype research</li>
+                  <li>CJM, USM, user flows, and mentoring a junior designer</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================ GALLERY (frames) ============================ -->
+      <section class="studio" id="gallery">
+        <div class="studio__scatter" aria-hidden="true">
+          <figure class="studio__pic" style="--x:9%;  --y:30%; --w:128px; --ar:3/4" data-depth="0.05"><span class="studio__pic-float" style="--i:0"><img src="assets/images/Визуал/1619907070.png" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:18%; --y:60%; --w:150px; --ar:4/3" data-depth="0.09"><span class="studio__pic-float" style="--i:1"><img src="assets/images/Визуал/1619907073.png" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:6%;  --y:76%; --w:110px; --ar:3/4" data-depth="0.07"><span class="studio__pic-float" style="--i:2"><img src="assets/images/Визуал/1619907080.jpg" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:27%; --y:20%; --w:120px; --ar:4/3" data-depth="0.11"><span class="studio__pic-float" style="--i:3"><img src="assets/images/Визуал/Frame 1000003143.png" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:40%; --y:38%; --w:138px; --ar:3/4" data-depth="0.04"><span class="studio__pic-float" style="--i:4"><img src="assets/images/Визуал/Frame 1000003842.png" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:50%; --y:78%; --w:132px; --ar:4/3" data-depth="0.10"><span class="studio__pic-float" style="--i:5"><img src="assets/images/Визуал/Frame 1000003846.png" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:60%; --y:22%; --w:118px; --ar:3/4" data-depth="0.08"><span class="studio__pic-float" style="--i:6"><img src="assets/images/Визуал/imageye___-_imgi_164_c90e1cf35923d0d2e2cd94098af82a7b8c890460.webp" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:73%; --y:60%; --w:150px; --ar:4/3" data-depth="0.06"><span class="studio__pic-float" style="--i:7"><img src="assets/images/Визуал/imageye___-_imgi_170_01051a6e7357af4b9f5b515a41a7dc8b4aa00f04.webp" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:88%; --y:28%; --w:120px; --ar:3/4" data-depth="0.12"><span class="studio__pic-float" style="--i:8"><img src="assets/images/Визуал/imageye___-_imgi_178_2cb3ccb989e1a77a768aba63ff47e96e3f18d7d6.webp" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:93%; --y:70%; --w:126px; --ar:4/3" data-depth="0.05"><span class="studio__pic-float" style="--i:9"><img src="assets/images/Визуал/imageye___-_imgi_184_882e721cca8494bd36cfc22d1e2830fc91c1c7ed.webp" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:81%; --y:76%; --w:104px; --ar:3/4" data-depth="0.09"><span class="studio__pic-float" style="--i:10"><img src="assets/images/Визуал/imageye___-_imgi_20_image.webp" alt="Work sample" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:36%; --y:74%; --w:112px; --ar:4/3" data-depth="0.07"><span class="studio__pic-float" style="--i:11"><img src="assets/images/Визуал/imageye___-_imgi_6_image.webp" alt="Work sample" loading="lazy" /></span></figure>
+        </div>
+
+        <div class="shell studio__inner reveal">
+          <h2 class="studio__heading">Studio <em>visuals</em></h2>
+          <p class="studio__body">Background in a product agency. I build quality products both from scratch and within an existing design system.</p>
+        </div>
+      </section>
+
+      <!-- lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+        <img class="lightbox__img" src="" alt="" />
+      </div>
+
+      <!-- ============================ CONTACT ============================ -->
+      <section class="contact" id="contact">
+        <div class="shell contact__inner">
+          <h2 class="contact__head reveal">Design focused<br />on business results.</h2>
+          <a class="btn btn--solid btn--lg reveal" href="https://t.me/mmrialle" target="_blank" rel="noopener"> Message on Telegram </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/core-renderer.js" defer></script>
+    <script src="js/hero-project.js" defer></script>
+    <script src="js/hero-gradient.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

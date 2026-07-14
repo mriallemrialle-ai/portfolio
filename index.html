@@ -28,10 +28,15 @@
 
     <!-- ============================ HERO ============================ -->
     <header class="hero" id="top">
-      <p class="hero__tagline">
-        Продуктовый дизайнер, создаю интерфейсы<br />
-        на основе данных, исследований и метрик.
-      </p>
+      <div class="hero__top">
+        <p class="hero__tagline">
+          Продуктовый дизайнер, создаю интерфейсы<br />
+          на основе данных, исследований и метрик.
+        </p>
+        <div class="hero__lang">
+          <a class="hero__lang-link" href="index-en.html">EN</a>
+        </div>
+      </div>
       <div class="hero__bottom">
         <h1 class="hero__name"><span class="hero__name-first">Мария</span><span class="hero__name-last">Маркова.</span></h1>
         <div class="hero__bar">
@@ -70,7 +75,9 @@
             <p class="about__statement reveal">
               Соединяю глубинные исследования и&nbsp;продуктовую аналитику, чтобы интерфейсы росли в&nbsp;метриках, а&nbsp;не только в&nbsp;макетах.
             </p>
+          </div>
 
+          <div class="about__right">
             <div class="metrics" role="list">
               <div class="metric reveal" role="listitem" style="--i: 0">
                 <span class="metric__num" data-target="19.1" data-decimals="1" data-prefix="+" data-suffix="%">+0%</span>
@@ -89,16 +96,6 @@
                 <span class="metric__label">в e-com, fintech, proptech и fashion-tech</span>
               </div>
             </div>
-          </div>
-
-          <div class="about__photo-wrap reveal" style="--i: 1">
-            <div class="about__photo">
-              <picture>
-                <source srcset="assets/images/photo.webp" type="image/webp" />
-                <img src="assets/images/photo.jpg" alt="Мария Маркова" />
-              </picture>
-            </div>
-            <p class="about__photo-caption">Senior Product Designer с шестилетним опытом в e-com, fintech, proptech и fashion-tech.</p>
           </div>
         </div>
       </section>
@@ -216,18 +213,18 @@
       <!-- ============================ GALLERY (frames) ============================ -->
       <section class="studio" id="gallery">
         <div class="studio__scatter" aria-hidden="true">
-          <figure class="studio__pic" style="--x:9%;  --y:30%; --w:128px; --ar:3/4" data-depth="0.05"><span class="studio__pic-float" style="--i:0"><img src="https://picsum.photos/seed/frame-ui-241/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:18%; --y:60%; --w:150px; --ar:4/3" data-depth="0.09"><span class="studio__pic-float" style="--i:1"><img src="https://picsum.photos/seed/frame-room-118/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:6%;  --y:76%; --w:110px; --ar:3/4" data-depth="0.07"><span class="studio__pic-float" style="--i:2"><img src="https://picsum.photos/seed/frame-screen-77/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:27%; --y:20%; --w:120px; --ar:4/3" data-depth="0.11"><span class="studio__pic-float" style="--i:3"><img src="https://picsum.photos/seed/frame-desk-509/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:40%; --y:38%; --w:138px; --ar:3/4" data-depth="0.04"><span class="studio__pic-float" style="--i:4"><img src="https://picsum.photos/seed/frame-proto-63/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:50%; --y:78%; --w:132px; --ar:4/3" data-depth="0.10"><span class="studio__pic-float" style="--i:5"><img src="https://picsum.photos/seed/frame-board-302/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:60%; --y:22%; --w:118px; --ar:3/4" data-depth="0.08"><span class="studio__pic-float" style="--i:6"><img src="https://picsum.photos/seed/frame-grid-820/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:73%; --y:60%; --w:150px; --ar:4/3" data-depth="0.06"><span class="studio__pic-float" style="--i:7"><img src="https://picsum.photos/seed/frame-flow-455/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:88%; --y:28%; --w:120px; --ar:3/4" data-depth="0.12"><span class="studio__pic-float" style="--i:8"><img src="https://picsum.photos/seed/frame-card-307/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:93%; --y:70%; --w:126px; --ar:4/3" data-depth="0.05"><span class="studio__pic-float" style="--i:9"><img src="https://picsum.photos/seed/frame-shot-611/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:81%; --y:76%; --w:104px; --ar:3/4" data-depth="0.09"><span class="studio__pic-float" style="--i:10"><img src="https://picsum.photos/seed/frame-page-198/520/700?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
-          <figure class="studio__pic" style="--x:36%; --y:74%; --w:112px; --ar:4/3" data-depth="0.07"><span class="studio__pic-float" style="--i:11"><img src="https://picsum.photos/seed/frame-case-742/700/520?grayscale" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:9%;  --y:30%; --w:128px; --ar:3/4" data-depth="0.05"><span class="studio__pic-float" style="--i:0"><img src="assets/images/Визуал/1619907070.png" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:18%; --y:60%; --w:150px; --ar:4/3" data-depth="0.09"><span class="studio__pic-float" style="--i:1"><img src="assets/images/Визуал/1619907073.png" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:6%;  --y:76%; --w:110px; --ar:3/4" data-depth="0.07"><span class="studio__pic-float" style="--i:2"><img src="assets/images/Визуал/1619907080.jpg" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:27%; --y:20%; --w:120px; --ar:4/3" data-depth="0.11"><span class="studio__pic-float" style="--i:3"><img src="assets/images/Визуал/Frame 1000003143.png" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:40%; --y:38%; --w:138px; --ar:3/4" data-depth="0.04"><span class="studio__pic-float" style="--i:4"><img src="assets/images/Визуал/Frame 1000003842.png" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:50%; --y:78%; --w:132px; --ar:4/3" data-depth="0.10"><span class="studio__pic-float" style="--i:5"><img src="assets/images/Визуал/Frame 1000003846.png" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:60%; --y:22%; --w:118px; --ar:3/4" data-depth="0.08"><span class="studio__pic-float" style="--i:6"><img src="assets/images/Визуал/imageye___-_imgi_164_c90e1cf35923d0d2e2cd94098af82a7b8c890460.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:73%; --y:60%; --w:150px; --ar:4/3" data-depth="0.06"><span class="studio__pic-float" style="--i:7"><img src="assets/images/Визуал/imageye___-_imgi_170_01051a6e7357af4b9f5b515a41a7dc8b4aa00f04.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:88%; --y:28%; --w:120px; --ar:3/4" data-depth="0.12"><span class="studio__pic-float" style="--i:8"><img src="assets/images/Визуал/imageye___-_imgi_178_2cb3ccb989e1a77a768aba63ff47e96e3f18d7d6.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:93%; --y:70%; --w:126px; --ar:4/3" data-depth="0.05"><span class="studio__pic-float" style="--i:9"><img src="assets/images/Визуал/imageye___-_imgi_184_882e721cca8494bd36cfc22d1e2830fc91c1c7ed.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:81%; --y:76%; --w:104px; --ar:3/4" data-depth="0.09"><span class="studio__pic-float" style="--i:10"><img src="assets/images/Визуал/imageye___-_imgi_20_image.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
+          <figure class="studio__pic" style="--x:36%; --y:74%; --w:112px; --ar:4/3" data-depth="0.07"><span class="studio__pic-float" style="--i:11"><img src="assets/images/Визуал/imageye___-_imgi_6_image.webp" alt="Кадр из работы" loading="lazy" /></span></figure>
         </div>
 
         <div class="shell studio__inner reveal">
