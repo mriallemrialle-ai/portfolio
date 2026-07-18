@@ -68,9 +68,9 @@ a { color: inherit; text-decoration: none; }
 
 .shell {
   width: 100%;
-  max-width: none;
+  max-width: var(--shell);
   margin-inline: auto;
-  padding-inline: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 5vw, 56px);
 }
 
 /* fixed film grain + edge vignette */
@@ -153,6 +153,18 @@ a { color: inherit; text-decoration: none; }
   display: block;
   width: 100%;
   height: 100%;
+}
+/* fade the bottom of the hero into the page black so screen 1 → 2 has no seam */
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  background: linear-gradient(to bottom, rgba(8, 6, 8, 0), #080608);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* top row: tagline (left) + language switch (right) */
@@ -301,6 +313,11 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.02em;
   font-size: 1.02rem;
 }
+.dock__brand-last {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+}
 .dock__divider {
   width: 1px; height: 20px;
   background: var(--line-2);
@@ -408,7 +425,7 @@ a { color: inherit; text-decoration: none; }
 }
 .metric__num {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+  font-size: clamp(1.6rem, 3.4vw, 2.9rem);
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -417,7 +434,7 @@ a { color: inherit; text-decoration: none; }
 }
 .metric__num--word {
   font-weight: 700;
-  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  font-size: clamp(1.4rem, 2.6vw, 2.3rem);
 }
 .metric__label {
   font-size: 0.92rem;
@@ -1046,7 +1063,6 @@ a { color: inherit; text-decoration: none; }
 
   /* hero */
   .hero { padding-inline: 20px; }
-  .shell { padding-inline: 20px; }
   /* stack name vertically so -0.4em kerning doesn't collapse letters at small sizes */
   .hero__name {
     flex-direction: column;

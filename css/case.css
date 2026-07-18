@@ -178,7 +178,7 @@ p + p { margin-top: 1em; }
 .wrap--full { max-width: none; margin: 0 auto; padding-inline: var(--pad); }
 .hypos__head { margin-bottom: clamp(20px, 3vw, 36px); }
 
-.hypos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 8px; }
+.hypos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 8px; }
 .hypo { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 24px; }
 .hypo__tag { display: block; font-size: 0.85rem; font-weight: 600; color: var(--faint); margin-bottom: 12px; }
 .hypo p { color: var(--muted); }
@@ -338,7 +338,8 @@ table.ab td .delta--soft b { color: var(--good); }
 /* ============================ RESPONSIVE ============================ */
 @media (max-width: 860px) {
   .toc { display: none; }
-  .roles, .hypos, .insights, .goals { grid-template-columns: 1fr; }
+  .roles, .insights, .goals { grid-template-columns: 1fr; }
+  .hypos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .quotes__grid { grid-template-columns: 1fr; }
   .quote:nth-child(n+2) { border-top: 1px solid var(--line); padding-top: clamp(24px, 5vw, 32px); }
   .solution__cols { grid-template-columns: 1fr; }
@@ -350,6 +351,7 @@ table.ab td .delta--soft b { color: var(--good); }
 @media (max-width: 520px) {
   body { font-size: 16px; }
   .solution__head { gap: 8px; }
+  .hypos { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
