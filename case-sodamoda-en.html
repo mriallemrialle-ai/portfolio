@@ -6,7 +6,7 @@
     <title>Case · Improving cart UX for sodamoda.ru</title>
     <meta
       name="description"
-      content="Case study: redesigning the shopping cart UX for the fashion platform sodamoda.ru. Research, hypotheses, solutions, UX and A/B testing. +14% cart-to-checkout conversion."
+      content="Case study: redesigning the shopping cart UX for the fashion platform sodamoda.ru. Research, hypotheses, solutions, UX and A/B testing. +14% checkout CR."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -153,7 +153,7 @@
         </div>
       </div>
 
-      <div class="wrap col">
+      <div class="wrap">
         <div class="hypos">
           <article class="hypo reveal"><span class="hypo__tag">Hypothesis #1</span><p>If we show <b>progress toward free shipping</b> directly in the cart, it will be easier for users to decide to buy, increasing CR.</p></article>
           <article class="hypo reveal"><span class="hypo__tag">Hypothesis #2</span><p>If we show the <b>benefit of registering</b> (a 10% discount on the first order) directly in the cart, more users will complete checkout, increasing CR.</p></article>
@@ -184,6 +184,10 @@
             <div class="mcard" style="left:72%; top:55%"><span>Hypothesis #5</span><b>Move to favorites</b></div>
             <div class="mcard mcard--lo" style="left:18%; top:82%"><span>Hypothesis #6</span><b>Change size/color</b></div>
           </div>
+      </div>
+
+      <div class="wrap col">
+        <p class="closing">We discussed the list of hypotheses with the team and ran a vote, scoring each idea by its expected impact on checkout CR and its implementation effort. Based on the discussion, we chose four hypotheses that had the strongest team support and combined high potential impact with a relatively low cost to build.</p>
       </div>
     </section>
 
@@ -302,6 +306,7 @@
 
       <div class="wrap col">
         <p class="closing">These insights shaped the final version of the interface, which was then handed off for validation in an A/B test.</p>
+        <p>Based on the UX testing, I made changes to the interface, after which the updated cart was validated with an A/B test on real traffic.</p>
       </div>
 
       <figure class="shot reveal"><img src="assets/images/После исследования.png" alt="Final version of the cart" /></figure>
@@ -313,8 +318,8 @@
         <h2 class="h2">A/B testing</h2>
         <h3 class="h3">Experiment goals</h3>
 
-        <p><b>Primary metric:</b> cart-to-checkout conversion.</p>
-        <p>Tested the impact of:</p>
+        <p><b>Primary metric:</b> checkout CR.</p>
+        <p>Tested the impact on checkout CR of:</p>
         <ul class="goal-list"><li>free shipping;</li><li>registration;</li><li>installment payments;</li><li>limited size availability.</li></ul>
 
         <div class="table-wrap">
@@ -324,7 +329,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Cart-to-checkout conversion</td>
+                <td>Checkout CR</td>
                 <td>32.0%</td><td>36.5%</td><td><span class="delta">+4.5&nbsp;pp (+14%)</span></td>
               </tr>
             </tbody>
@@ -344,8 +349,7 @@
           it holds attention, surfaces benefits, and helps users decide.
         </p>
         <ul class="outcome-list">
-          <li>Cart-to-purchase conversion — <b>+14%</b>.</li>
-          <li>Abandoned carts — <b>−12%</b>.</li>
+          <li>Checkout CR — <b>+14%</b>.</li>
         </ul>
       </div>
 

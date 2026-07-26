@@ -33,6 +33,12 @@
 
   --mx: 0;   /* pointer parallax, set from JS, range -1..1 */
   --my: 0;
+
+  /* ---------- единая система отступов между секциями ---------- */
+  --sp-sect-sm: clamp(80px, 12.5vh, 152px);
+  --sp-sect-md: clamp(100px, 15vh, 176px);
+  --sp-sect-lg: clamp(124px, 18.5vh, 212px);
+  --sp-sect-xl: clamp(146px, 21vh, 240px);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -351,7 +357,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ============================ ABOUT ============================ */
 .about {
-  padding: clamp(110px, 18vh, 200px) 0 clamp(70px, 10vh, 120px);
+  padding: var(--sp-sect-lg) 0 var(--sp-sect-sm);
   position: relative;
   /* clip blobs without breaking sticky child (no BFC created) */
   overflow: clip;
@@ -444,7 +450,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ============================ CASES ============================ */
 .cases {
-  padding: clamp(80px, 12vh, 140px) 0 0;
+  padding: var(--sp-sect-sm) 0 0;
 }
 .cases__head-sticky {
   position: sticky;
@@ -532,9 +538,9 @@ a { color: inherit; text-decoration: none; }
   margin-top: 4px;
 }
 .case-card__tags span {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   color: var(--text-mute);
   border: 1px solid var(--line-2);
   border-radius: 100px;
@@ -553,7 +559,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ============================ SUPERPOWER ============================ */
 .superpower {
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: var(--sp-sect-sm) 0;
   position: relative;
   overflow: hidden;
 }
@@ -642,7 +648,7 @@ a { color: inherit; text-decoration: none; }
 .superpower__core span:nth-child(3) { color: var(--text); }
 
 /* ============================ EXPERIENCE ============================ */
-.exp { padding: clamp(90px, 14vh, 160px) 0; }
+.exp { padding: var(--sp-sect-md) 0; }
 .timeline { list-style: none; display: grid; }
 .role {
   display: grid;
@@ -729,7 +735,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================ GALLERY (frames) ============================ */
-.gallery { padding: clamp(70px, 12vh, 140px) 0 clamp(80px, 12vh, 140px); }
+.gallery { padding: var(--sp-sect-sm) 0 var(--sp-sect-sm); }
 .gallery .section__head { margin-bottom: clamp(28px, 4vw, 48px); }
 .gallery__strip {
   display: flex;
@@ -770,7 +776,7 @@ a { color: inherit; text-decoration: none; }
   min-height: clamp(820px, 124vh, 1320px);
   display: flex;
   align-items: center;
-  padding: clamp(100px, 16vh, 180px) 0;
+  padding: var(--sp-sect-lg) 0;
 }
 .studio__scatter {
   position: absolute;
@@ -851,7 +857,7 @@ a { color: inherit; text-decoration: none; }
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: clamp(3rem, 11vw, 9rem);
-  line-height: 0.92;
+  line-height: 0.8;
   letter-spacing: -0.04em;
 }
 .studio__heading em {
@@ -913,7 +919,7 @@ a { color: inherit; text-decoration: none; }
 .lightbox__close:hover { background: var(--accent); }
 
 /* ============================ RESULTS (bento) ============================ */
-.results { padding: clamp(90px, 14vh, 160px) 0; }
+.results { padding: var(--sp-sect-md) 0; }
 .bento {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -988,7 +994,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ============================ CONTACT ============================ */
 .contact {
-  padding: clamp(110px, 18vh, 220px) 0 clamp(130px, 20vh, 240px);
+  padding: var(--sp-sect-lg) 0 var(--sp-sect-xl);
   position: relative;
   overflow: hidden;
 }

@@ -103,13 +103,13 @@
       scaleEase: 0.08,   // smoothing of the per-tile scale
       scrollMult: 0.1,   // how much raw scroll velocity feeds the drift
       scaleMin: 0.55,
-      scaleMax: 1.35,
+      scaleMax: 1.15,
     };
     const Z = [-260, -190, -120, -60, 0, 60, 120, 190, 260]; // depth planes (px)
     const SPD = [0.8, 0.9, 1, 1.1, 1.2];                     // per-tile parallax speed
 
     // densify the field by cloning the source frames
-    const TARGET = 28;
+    const TARGET = 18;
     const base = Array.from(scatter.querySelectorAll(".studio__pic"));
     const baseN = base.length;
     for (let i = base.length; i < TARGET; i++) {
