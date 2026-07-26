@@ -217,8 +217,6 @@ p + p { margin-top: 1em; }
 .mcard { position: absolute; transform: translate(-50%, -50%); width: clamp(150px, 20vw, 210px); background: var(--card); border: 1px solid var(--line-2); border-radius: 12px; padding: 12px 14px; box-shadow: 0 12px 30px -18px rgba(0,0,0,0.9); }
 .mcard span { display: block; font-size: 0.72rem; color: var(--faint); margin-bottom: 4px; }
 .mcard b { font-size: 0.9rem; font-weight: 600; }
-.mcard--hi span { color: #b8e986; }
-.mcard--lo span { color: #ffb3a3; }
 
 /* ============================ SOLUTIONS ============================ */
 .solution { padding-top: var(--sp-sm); }
