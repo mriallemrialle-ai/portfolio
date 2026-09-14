@@ -108,9 +108,13 @@
     const Z = [-260, -190, -120, -60, 0, 60, 120, 190, 260]; // depth planes (px)
     const SPD = [0.8, 0.9, 1, 1.1, 1.2];                     // per-tile parallax speed
 
-    // densify the field by cloning the source frames
-    const TARGET = 18;
-    const base = Array.from(scatter.querySelectorAll(".studio__pic"));
+    // cap the field size — trim extra source frames, then densify by cloning if short
+    const TARGET = 12;
+    let base = Array.from(scatter.querySelectorAll(".studio__pic"));
+    if (base.length > TARGET) {
+      base.slice(TARGET).forEach((el) => el.remove());
+      base = base.slice(0, TARGET);
+    }
     const baseN = base.length;
     for (let i = base.length; i < TARGET; i++) {
       scatter.appendChild(base[i % baseN].cloneNode(true));
