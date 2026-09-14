@@ -232,7 +232,40 @@
 
     closeBtn.addEventListener("click", close);
     lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+    /* ---------- 7b. Gallery modal — "Посмотреть" shows every studio image ---------- */
+    const galleryBtn = document.getElementById("galleryOpen");
+    const galleryModal = document.getElementById("galleryModal");
+    if (galleryBtn && galleryModal) {
+      const galleryClose = galleryModal.querySelector(".gallery-modal__close");
+
+      const openGallery = () => {
+        galleryModal.classList.add("is-open");
+        galleryModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      };
+      const closeGallery = () => {
+        galleryModal.classList.remove("is-open");
+        galleryModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      };
+
+      galleryBtn.addEventListener("click", openGallery);
+      galleryClose.addEventListener("click", closeGallery);
+      galleryModal.addEventListener("click", (e) => { if (e.target === galleryModal) closeGallery(); });
+
+      galleryModal.querySelectorAll(".gallery-modal__grid img").forEach((img) => {
+        img.addEventListener("click", () => open(img.src, img.alt));
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        if (galleryModal.classList.contains("is-open")) closeGallery();
+        else close();
+      });
+    } else {
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    }
   }
 
 })();
